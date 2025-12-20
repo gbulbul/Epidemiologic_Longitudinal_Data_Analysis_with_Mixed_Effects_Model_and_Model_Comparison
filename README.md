@@ -1,6 +1,6 @@
 # epi_longitudinal
 
-Applied longitudinal epidemiology project with explicit model comparison.
+Applied longitudinal epidemiology project with model comparison.
 
 ## Models
 - Linear Mixed-Effects Models (full vs reduced)
