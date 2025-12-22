@@ -13,4 +13,10 @@ Applied longitudinal epidemiology project with model comparison.
 - Prediction error (RMSE)
 
 ## Goal
-Demonstrate principled model selection for longitudinal epidemiologic data.
+Demonstrate model selection procedure for longitudinal epidemiologic data.
+
+## Project Structure
+
+- `src/`: Python scripts for model fitting and visualization  
+- `sql/`: SQL scripts for longitudinal data preparation
+
