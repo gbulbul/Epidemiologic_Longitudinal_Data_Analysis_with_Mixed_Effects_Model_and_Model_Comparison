@@ -11,4 +11,7 @@ plt.title("Model Comparison Based on AIC")
 plt.xticks(rotation=20)
 plt.tight_layout()
 
+# SAVE FIGURE
+plt.savefig("figures/figure_1_model_comparison.png", dpi=300)
+
 plt.show()
