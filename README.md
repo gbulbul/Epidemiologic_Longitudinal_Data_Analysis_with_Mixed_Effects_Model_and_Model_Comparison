@@ -20,3 +20,8 @@ Demonstrate model selection procedure for longitudinal epidemiologic data.
 - `src/`: Python scripts for model fitting and visualization  
 - `sql/`: SQL scripts for longitudinal data preparation
 
+![Figure 1](figures/figure_1_model_comparison.png)
+
+**Figure 1.** Comparison of predictive model performance. Multiple statistical and machine‑learning models were evaluated using the same dataset and performance criteria. The figure summarizes differences in predictive accuracy across models, supporting direct assessment of relative model performance.
+
+
