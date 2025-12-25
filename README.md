@@ -30,12 +30,17 @@ Results:
 | BIC | 3221.68 | 3451.29 |
 
 *Lower AIC and BIC indicate better model fit.*
+
 **INTERPRETATION**
+
 Full LMM clearly outperforms the reduced model. The additional predictors in the full model are important for explaining the outcome.
 
 **### Likelihood Ratio Test (LRT)**
+
 LR statistic = 243.42, df = 2 (Very large LR statistic with small df)
+
 **INTERPRETATION**
+
 This strongly indicates that the full model provides a significantly better fit. This suggests the excluded terms in the reduced model have a statistically meaningful effect on the outcome. The outcome is strongly influenced by the predictors included in the full mixed-effects model.
 
 **### Model Comparison: GEE Models (Population-Averaged)**
@@ -54,6 +59,7 @@ Two GEE models are with the same mean structure.Difference lies only in the work
 **Exchangeable**: constant correlation among repeated measures, **Independence**: assumes no within-subject correlation
 
 **INTERPRETATION**
+
 Among GEE models, the independence working correlation provided a slightly better fit than the exchangeable structure, suggesting minimal impact of within-subject correlation on the population-averaged mean outcome.
 
 **###Prediction Performance (LMM)**
@@ -61,6 +67,7 @@ Among GEE models, the independence working correlation provided a slightly bette
 RMSE = 1.28
 
 **INTERPRETATION**
+
 On average, predictions deviate from observed outcomes by ~1.28 units. Indicates reasonable predictive accuracy for longitudinal data.
 
 **NOTE**: RMSE is used only for LMM, not for GEE (GEE is not predictive)
