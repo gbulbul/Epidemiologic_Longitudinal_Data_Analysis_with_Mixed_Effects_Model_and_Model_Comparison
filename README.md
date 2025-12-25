@@ -57,7 +57,9 @@ Two GEE models are with the same mean structure.Difference lies only in the work
 Among GEE models, the independence working correlation provided a slightly better fit than the exchangeable structure, suggesting minimal impact of within-subject correlation on the population-averaged mean outcome.
 
 **###Prediction Performance (LMM)**
+
 RMSE = 1.28
+
 **INTERPRETATION**
 On average, predictions deviate from observed outcomes by ~1.28 units. Indicates reasonable predictive accuracy for longitudinal data.
 
