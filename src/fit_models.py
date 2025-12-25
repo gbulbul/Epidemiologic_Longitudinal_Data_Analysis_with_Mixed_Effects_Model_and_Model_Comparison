@@ -27,28 +27,49 @@ def fit_lmm_reduced(df):
     return model.fit(reml=False)
 
 
+
+
 def fit_gee_exchangeable(df):
     """
-    GEE with exchangeable correlation
+     GEE with exchangeable working correlation
+     Valid for QIC-based model comparison
     """
     model = smf.gee(
         "outcome ~ treatment + time + age + biomarker",
         groups="id",
         data=df,
+        family=sm.families.Gaussian(),
         cov_struct=sm.cov_struct.Exchangeable()
     )
-    return model.fit()
 
+    result = model.fit()
+
+    scale = result.pearson_chi2 / result.df_resid
+
+    # 🔴 CRITICAL FIX (THIS IS WHAT WAS MISSING)
+    result.scale = scale
+    result.model.scale = scale
+
+    return result
 
 def fit_gee_independence(df):
     """
-    GEE with independence correlation
+    GEE with independence working correlation
+    Valid for QIC-based comparison
     """
     model = smf.gee(
         "outcome ~ treatment + time + age + biomarker",
         groups="id",
         data=df,
+        family=sm.families.Gaussian(),
         cov_struct=sm.cov_struct.Independence()
     )
-    return model.fit()
+
+    result = model.fit()
+
+    scale = result.pearson_chi2 / result.df_resid
+    result.scale = scale
+    result.model.scale = scale
+
+    return result
 
