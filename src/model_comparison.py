@@ -68,3 +68,8 @@ if __name__ == "__main__":
     # ---------------------------
     df["pred_lmm"] = lmm_full.predict(df)
     print("\nLMM RMSE:", rmse(df["outcome"], df["pred_lmm"]))
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> d47c792b5354368553749af1e5bedcddb503c5fa
